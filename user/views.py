@@ -9,9 +9,9 @@ from .models import User
 class SignupForm(UserCreationForm):
     class Meta:
         model = User
-        field = ['username','email', 'password1', 'password2']
-
-
+        fields = ['username', 'email', 'password1', 'password2']
+        
+        
 def signup(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
