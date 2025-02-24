@@ -10,8 +10,7 @@ class SignupForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
-        
-        
+
 def signup(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
