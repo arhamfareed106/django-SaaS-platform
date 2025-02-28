@@ -6,6 +6,9 @@ from .models import User
 
 # Create your views here.
 
+
+
+
 class SignupForm(UserCreationForm):
     class Meta:
         model = User
