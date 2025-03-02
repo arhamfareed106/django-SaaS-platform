@@ -11,7 +11,7 @@ def pricing(request):
     return render(request, 'core/pricing.html')
 
 def signup(request):
-    return render(request, 'signup.html')
+    return render(request, 'core/signup.html')
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'core/login.html')
