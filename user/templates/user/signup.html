@@ -1,18 +1,16 @@
 {% extends "core/base.html" %}
 
-{% block title %} Sign up {% endblock  %}
+{% block title %} Sign up {% endblock %}
 
 {% block content %}
-    <h1 class="text-xl">Sign Up</h1>
-    <form action="." method="post">
+    <h1 class="text-xl text-white">Sign Up</h1>
+    <form action="." method="post" class="bg-gray-900 p-6 rounded-lg shadow-md">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button class="mt=4 py-4 px-6 bg-cyan-800 rounded-xl text-white ">
+        <div class="space-y-4 text-white">
+            {{ form.as_p }}
+        </div>
+        <button class="mt-4 py-2 px-6 bg-cyan-700 text-white font-semibold rounded-xl hover:bg-cyan-600">
             Submit
         </button>
-
     </form>
-
-
-
 {% endblock content %}

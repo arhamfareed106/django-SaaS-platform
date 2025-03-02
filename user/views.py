@@ -6,9 +6,6 @@ from .models import User
 
 # Create your views here.
 
-
-
-
 class SignupForm(UserCreationForm):
     class Meta:
         model = User
@@ -21,12 +18,9 @@ def signup(request):
         if form.is_valid():
             user= form.save()
             authenticate(username=user.username, password=user.password)
-            
             if user is not None:
                 login(request, user)
                 return redirect('/')
-
-            
     else:
         form = SignupForm()
     return render(request, 'user/signup.html',{
