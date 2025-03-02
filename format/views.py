@@ -9,3 +9,9 @@ def about(request):
 
 def pricing(request):
     return render(request, 'core/pricing.html')
+
+def signup(request):
+    return render(request, 'signup.html')
+
+def login(request):
+    return render(request, 'login.html')
